@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace EmployeeWage
+﻿namespace EmployeeWage
 {
+
     public enum Variable : byte
     {
         EmployeePresent = 1,
@@ -36,6 +35,10 @@ namespace EmployeeWage
             Console.Write(" Enter Hourly Wage : "); var wage = Convert.ToByte(Console.ReadLine());
             var company1 = new CompanyWiseWage(cName, hoursDay, hoursPartDay, hoursMonth, daysMonth, wage);
             Console.WriteLine("\n >>> Employee was paid $ {0} by {1} after completing a month", company1.GetMonthlyWage(), company1.CompanyName);
+
+            // UC 9 to 12
+
+            new MultiCompanyWiseWage().UserInteractions();
         }
     }
 }
